@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import Navbar from "../components/Navbar";
 import ProductForm from "./ProductForm";
-import ProductSearch from "./ProductSearch";
+import HomePage from "./HomePage";
 import { fetchProducts, createProduct, updateProduct, deleteProduct } from "./api.js";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Load products from local storage on mount
+
   useEffect(() => {
     fetchProducts()
       .then(data => {
@@ -36,37 +36,37 @@ function App() {
       });
   }, []);
 
-  // Add product to local state
+
   const addProduct = async (newProd) => {
     try {
       const saved = await createProduct(newProd);
       setProducts(prev => [...prev, saved]);
-    } catch (err) {
+    } catch {
       alert("Failed to add product.");
     }
   };
 
-  // Delete product from local state
+
   const removeProduct = async (id) => {
     try {
       await deleteProduct(id);
       setProducts(prev => prev.filter(p => p.id !== id));
-    } catch (err) {
+    } catch {
       alert("Failed to delete product.");
     }
   };
 
-  // Edit product in local state
+
   const editProduct = async (id, updatedData) => {
     try {
       const updated = await updateProduct(id, updatedData);
       setProducts(prev => prev.map(p => p.id === id ? updated : p));
-    } catch (err) {
+    } catch {
       alert("Failed to update product.");
     }
   };
 
-  // Filter products based on search
+
   const filteredProducts = products.filter(p =>
     p.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -80,7 +80,7 @@ function App() {
         onSearch={setSearchQuery}
       />
       <Routes>
-        <Route path="/" element={<h2>Welcome to ShopCart – use the navigation above.</h2>} />
+        <Route path="/" element={<HomePage products={products} loading={loading} />} />
 
         <Route
           path="/products"

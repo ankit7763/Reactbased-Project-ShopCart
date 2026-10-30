@@ -1,4 +1,3 @@
-import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
@@ -7,7 +6,7 @@ const Navbar = ({ onToggleTheme, currentTheme, searchQuery, onSearch }) => (
 
         {/* LEFT — Logo */}
         <div className="nav-left">
-            <div className="logo">ShopCart</div>
+            <Link to="/" className="logo" aria-label="ShopCart home">ShopCart</Link>
         </div>
 
         {/* CENTER — Search Bar */}
@@ -35,8 +34,9 @@ const Navbar = ({ onToggleTheme, currentTheme, searchQuery, onSearch }) => (
         {/* RIGHT — Nav Links + Theme Toggle */}
         <div className="nav-right">
             <nav>
+                <Link to="/">Home</Link>
                 <Link to="/products">Products</Link>
-                <Link to="/AddProduct">Add Product</Link>
+                <Link to="/addproduct">Add Product</Link>
             </nav>
             <button className="theme-toggle" onClick={onToggleTheme}>
                 {currentTheme === 'light' ? '🌙 Dark' : '☀️ Light'}

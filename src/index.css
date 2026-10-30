@@ -91,7 +91,7 @@ body {
   background-color: darkblue;
 }
 
-/* Edit & Delete Buttons */
+
 .secondary-buttons {
   display: flex;
   gap: 8px;
@@ -132,7 +132,7 @@ body {
   background-color: #dc2626;
 }
 
-/* Inline Edit Form */
+
 .edit-card {
   width: 260px;
 }
@@ -192,7 +192,7 @@ body {
   background-color: #4b5563;
 }
 
-/* Global CSS variables – default = light theme */
+
 :root {
   --bg-color: #f8f9fa;
   --card-text: #222;
@@ -205,7 +205,7 @@ body {
   --button-text: #555;
 }
 
-/* Dark theme overrides */
+
 .dark {
   --bg-color: #1a1a1a;
   --text-color: #e0e0e0;
@@ -218,7 +218,7 @@ body {
   --button-text: #aaa;
 }
 
-/* Apply the variables */
+
 body {
   background: var(--bg-color);
   color: var(--text-color);

@@ -8,7 +8,7 @@
   gap: 1rem;
 }
 
-/* LEFT */
+
 .nav-left {
   display: flex;
   align-items: center;
@@ -20,9 +20,10 @@
   font-weight: 700;
   color: var(--nav-text);
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
-/* CENTER — Search */
+
 .nav-center {
   flex: 1;
   display: flex;
@@ -70,7 +71,7 @@
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
-/* Dark mode search input */
+
 .dark .search-input {
   background: #2c2c2c;
   border-color: #444;
@@ -90,7 +91,7 @@
   color: #888;
 }
 
-/* Clear button */
+
 .search-clear {
   position: absolute;
   right: 10px;
@@ -110,7 +111,7 @@
   background: rgba(239, 68, 68, 0.1);
 }
 
-/* RIGHT */
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -150,7 +151,7 @@
   color: var(--button-text);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
@@ -166,6 +167,11 @@
   }
 
   .nav-right nav {
-    display: none;
+    display: flex;
+    gap: 0.65rem;
+  }
+
+  .nav-right nav a {
+    font-size: 0.85rem;
   }
 }
