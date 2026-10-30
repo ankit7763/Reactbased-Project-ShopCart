@@ -1,0 +1,96 @@
+/* ProductCard.css */
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 300px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: #2e7d32;
+  margin: 4px 0;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.button-group {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.add-to-cart-button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background: #1565c0;
+}
+
+.secondary-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.secondary-buttons button {
+  background: #fafafa;
+  color: #333;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: 1;
+  transition: transform 0.2s, background 0.3s;
+  /* Slight diagonal tilt */
+  transform: rotate(-8deg);
+}
+
+.secondary-buttons button:hover {
+  background: #f0f0f0;
+  transform: rotate(-8deg) scale(1.05);
+}
+
+/* Ensure edit/delete text remains readable despite tilt */
+.secondary-buttons button span {
+  display: inline-block;
+  transform: rotate(8deg);
+}

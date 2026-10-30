@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Gaming Laptop",
+        "price": "₹ 55,999",
+        "description": "Powerful laptop for gaming and programming.",
+        "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600"
+    },
+    {
+        "id": 2,
+        "name": "Digital Camera",
+        "price": "₹18,999",
+        "description": "Capture beautiful photos and memorable moments.",
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600"
+    },
+    {
+        "id": 3,
+        "name": "Bluetooth Speaker",
+        "price": "₹1,799",
+        "description": "Portable speaker with clear and powerful sound.",
+        "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600"
+    }
+]

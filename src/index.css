@@ -1,0 +1,244 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search-status {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-products-found {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+.no-products-found span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.no-products-found p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.no-products-found small {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.product-card {
+  width: 250px;
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px gray;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info h2 {
+  font-size: 20px;
+}
+
+.product-info h3 {
+  color: green;
+}
+
+.product-info p {
+  color: gray;
+}
+
+.product-info button,
+.add-to-cart-button {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: auto;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.product-info button:hover,
+.add-to-cart-button:hover {
+  background-color: darkblue;
+}
+
+/* Edit & Delete Buttons */
+.secondary-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.edit-button {
+  flex: 1;
+  background-color: #f59e0b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.edit-button:hover {
+  background-color: #d97706;
+}
+
+.delete-button {
+  flex: 1;
+  background-color: #ef4444;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+/* Inline Edit Form */
+.edit-card {
+  width: 260px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.edit-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.save-btn {
+  flex: 1;
+  background-color: #22c55e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #16a34a;
+}
+
+.cancel-btn {
+  flex: 1;
+  background-color: #6b7280;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #4b5563;
+}
+
+/* Global CSS variables – default = light theme */
+:root {
+  --bg-color: #f8f9fa;
+  --card-text: #222;
+  --text-color: #222;
+  --nav-bg: #f8f9fa;
+  --nav-text: #333;
+  --nav-hover: #000;
+  --button-bg: transparent;
+  --button-border: #555;
+  --button-text: #555;
+}
+
+/* Dark theme overrides */
+.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --card-text: #e0e0e0;
+  --nav-bg: #2c2c2c;
+  --nav-text: #ddd;
+  --nav-hover: #fff;
+  --button-bg: transparent;
+  --button-border: #aaa;
+  --button-text: #aaa;
+}
+
+/* Apply the variables */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navbar uses the vars */
+.navbar {
+  background: var(--nav-bg);
+}
+
+.navbar nav a {
+  color: var(--nav-text);
+}
+
+.navbar nav a:hover {
+  color: var(--nav-hover);
+}
+
+.theme-toggle {
+  background: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--button-text);
+}

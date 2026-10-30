@@ -1,0 +1,65 @@
+/* ---------- Product Form ---------- */
+.product-form {
+    max-width: 520px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    /* respects light / dark theme */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.product-form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Shared style for inputs & textarea */
+.product-form input,
+.product-form textarea {
+    width: 100%;
+    margin-bottom: 0.8rem;
+    padding: 0.6rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: #fff;
+    /* light mode */
+    color: #222;
+    font-family: inherit;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+/* Dark‑mode overrides (uses the CSS variables you already defined) */
+.dark .product-form input,
+.dark .product-form textarea {
+    background: #2a2a2a;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+/* Focus style (helps accessibility) */
+.product-form input:focus,
+.product-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Submit button – reuse the same blue styling you already have for “Add to Cart” */
+.add-product-button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.add-product-button:hover {
+    background: #0056b3;
+}
